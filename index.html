@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>四則運算遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <button id="start-game">開始遊戲</button>
+        <div id="game-area" class="hidden">
+            <div id="question"></div>
+            <input type="text" id="answer" autocomplete="off">
+            <button id="submit">提交答案</button>
+            <div>分數: <span id="score">0</span></div>
+            <div>剩餘時間: <span id="timer">20</span> 秒</div>
+        </div>
+        <div id="name-input" class="hidden">
+            <div>遊戲結束！</div>
+            <div>您的分數是: <span id="final-score"></span></div>
+            <div>
+                <label for="player-name">輸入您的名字: </label>
+                <input type="text" id="player-name">
+                <button id="save-score">儲存分數</button>
+            </div>
+        </div>
+        <div>
+            <label for="difficulty">選擇難度: </label>
+            <select id="difficulty">
+                <option value="easy">簡單</option>
+                <option value="medium">中等</option>
+                <option value="hard">困難</option>
+            </select>
+        </div>
+        <div>
+            <label for="time-limit">選擇時間: </label>
+            <select id="time-limit">
+                <option value="20">20秒</option>
+                <option value="30">30秒</option>
+                <option value="40">40秒</option>
+            </select>
+        </div>
+        <div>
+            <h3>最高分數</h3>
+            <div>
+                <h4>簡單</h4>
+                <ul id="highscores-list-easy"></ul>
+            </div>
+            <div>
+                <h4>中等</h4>
+                <ul id="highscores-list-medium"></ul>
+            </div>
+            <div>
+                <h4>困難</h4>
+                <ul id="highscores-list-hard"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="floating-symbols"></div>
+    <audio id="cheerSound" src="cheer.mp3"></audio>
+    <audio id="booSound" src="boo.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
